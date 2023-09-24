@@ -2,6 +2,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 
+
 l = []
 print("Enter two numbers separated by a space in the form of 'x_value y_value' to store values or enter a blank input to start processing stored input")
 while True:
@@ -21,7 +22,6 @@ while True:
             l.append([int(vals[0]), int(vals[1])])
 
 
-
 x = np.array(l[0]).reshape((-1, 1))
 y = np.array(l[1])
 
@@ -36,5 +36,5 @@ points = []
 for i in l[0]:
     points.append(slope*i + intercept)
 
-plt.plot(l[0],y)
+plt.plot(l[0], points)
 plt.show()
